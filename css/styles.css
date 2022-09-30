@@ -132,12 +132,13 @@ img {
   display: flex;
   gap: 50px;
   margin-left: auto;
-  align-items: baseline;
+  /* align-items: baseline; */
 }
 .header-adress-list-item {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
+  align-items: center;
 
   font-weight: 500;
   line-height: 1.14;
@@ -167,8 +168,9 @@ img {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
+  margin: 0 auto;
 
-  background-color: var(--dark-bg-color);
+  background-color: #c4c4c4;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -176,8 +178,8 @@ img {
     url("../images/index-page-img/hero-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1600px;
-  flex-grow: 1;
+  background-size: cover;
+  max-width: 1600px;
   text-align: center;
 }
 
@@ -212,6 +214,7 @@ img {
   cursor: pointer;
   border-color: transparent;
   border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hero-button:hover,
@@ -477,8 +480,12 @@ img {
 
 .footer-content {
   display: flex;
-  gap: 70px;
+  /* gap: 70px; */
   align-items: baseline;
+}
+
+.footer-left {
+  margin-right: 70px;
 }
 
 .footer-follow-title {
@@ -558,12 +565,13 @@ img {
 }
 
 .cards-link {
+  display: block;
   color: inherit;
   text-decoration: none;
 }
 
-.cards-list-item:hover,
-.cards-list-item:focus {
+.cards-link:hover,
+.cards-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
